@@ -1,16 +1,8 @@
-
-// export class Home {
-//     render() {
-//         return(
-//             <h1>hello home</h1>
-//         )
-//     }
-// }
-
+import Menu from "../../components/menu";   
 
 const Home = () => {
     return(
-        <h1>hello home</h1>
+        <Menu/>
     )
 }
 
