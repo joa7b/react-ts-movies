@@ -1,8 +1,24 @@
-import Menu from "../../components/menu";   
+import { useEffect, useState } from "react";
+import Menu from "../../components/menu";
+import api from "../../utils/api/movies.api";
+import Movie from "../../utils/types/movies.type"
 
 const Home = () => {
+    const [movies, setMovies] = useState<Movie[]>([])
+
+    useEffect(() => {
+        const getAllMovies = async () => {
+            const data = await api.getAllMovies()
+            setMovies(data)
+        }
+        getAllMovies()
+      }, []);
+
     return(
-        <Menu/>
+        <>
+            <Menu/>
+            {movies.map((e: Movie) => <p key={e.title}>{e.title}</p>)}
+        </>
     )
 }
 
