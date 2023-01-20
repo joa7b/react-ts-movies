@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Banner from "../../components/Banner";
+import Banner from "../../components/banner";
 import Menu from "../../components/menu";
 import api from "../../utils/api/movies.api";
 import Movie from "../../utils/types/movies.type";
