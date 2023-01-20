@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+
+import Banner from "../../components/Banner";
 import Menu from "../../components/menu";
 import api from "../../utils/api/movies.api";
 import Movie from "../../utils/types/movies.type";
 
-import "./styles";
+import {MainWrapper} from"./styles";
 
 const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -16,14 +18,12 @@ const Home = () => {
     getAllMovies();
   }, []);
 
-  return (
-    <>
+  return(
+    <MainWrapper>
       <Menu />
-      {movies.map((e: Movie) => (
-        <p key={e.title}>{e.title}</p>
-      ))}
-    </>
-  );
+      <Banner />
+    </MainWrapper>
+  )
 };
 
 export default Home;
