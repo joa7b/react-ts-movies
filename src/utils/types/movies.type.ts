@@ -6,4 +6,4 @@ type Movie = {
   trailerYoutubeUrl: string;
 };
 
-export default Movie
+export default Movie;
