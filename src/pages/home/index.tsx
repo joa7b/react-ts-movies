@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
+import api from "../../utils/api/movies.api";
 import Banner from "../../components/banner";
 import Menu from "../../components/menu";
-import api from "../../utils/api/movies.api";
 import Movie from "../../utils/types/movies.type";
+import Slide from "../../components/slide";
 
-import {MainWrapper} from"./styles";
+import {MainWrapper, MainItem} from"./styles";
 
 const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -21,7 +22,10 @@ const Home = () => {
   return(
     <MainWrapper>
       <Menu />
-      <Banner />
+      <MainItem>
+        <Banner />
+        <Slide />
+      </MainItem>
     </MainWrapper>
   )
 };

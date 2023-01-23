@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BannerWrapper = styled.section`
   width: 100%;
-  height: 50rem;
+  height: 100vh;
 
   position: relative;
   background-image: url("../../../assets/images/1126978.jpg");
@@ -13,7 +13,7 @@ export const BannerWrapper = styled.section`
 export const BannerFilter = styled.section`
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 50rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
