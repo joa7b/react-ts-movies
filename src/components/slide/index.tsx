@@ -16,8 +16,6 @@ const Slide = () => {
       getAllMovies();
     }, []);
 
-    console.log(movies)
-
 
     return(
         <SlideWrapper>
