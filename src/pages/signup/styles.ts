@@ -22,7 +22,7 @@ export const MainItem = styled.section`
   height: 100vh;
 `;
 
-export const LoginContainer = styled.div`
+export const SignUpContainer = styled.div`
   padding: 70px;
   background-color: black;
   color: white;
@@ -48,14 +48,14 @@ export const FormContainer = styled.form`
   }
 `;
 
-export const InputLogin = styled.input`
+export const InputSignUp = styled.input`
   padding: 15px;
   margin-bottom: 20px;
   border: none;
   border-radius: 2px;
 `;
 
-export const ButtonLogin = styled.button`
+export const ButtonSignUp = styled.button`
   padding: 15px;
   border-radius: 2px;
 

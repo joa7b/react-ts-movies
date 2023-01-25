@@ -1,22 +1,30 @@
 import Header from "../../components/menu";
 
-import { MainWrapper, MainItem, SignUpContainer, FormContainer, InputSignUp, ButtonSignUp, TitleLogin } from "./styles";
+import { MainWrapper, MainItem } from "./styles";
 
 const Dashboard = () => {
   return (
     <MainWrapper>
       <Header />
       <MainItem>
-        <SignUpContainer>
-          <TitleLogin>Cadastre-se</TitleLogin>
-          <FormContainer action="">
-            <InputSignUp type="text" placeholder="Insira seu nome" />
-            <InputSignUp type="text" placeholder="Insira um nome de usuário" />
-            <InputSignUp type="text" placeholder="Insira uma senha" />
-            <ButtonSignUp>Enviar</ButtonSignUp>
-            <p>Voltar</p>
-          </FormContainer>
-        </SignUpContainer>
+        <div>
+          <h2>Cadastro de produto</h2>
+          <form action="">
+            <input type="text" placeholder="Insira o título" />
+            <textarea
+              name=""
+              id=""
+              cols={30}
+              rows={10}
+              placeholder="Insira a descrição"
+            />
+            <input type="number" placeholder="Ano de lançamento" />
+            <input type="text" placeholder="Link da imagem de capa" />
+            <input type="number" placeholder="IMDB Score" />
+            <input type="text" placeholder="Link trailer no youtube" />
+            <button>Enviar</button>
+          </form>
+        </div>
       </MainItem>
     </MainWrapper>
   );
