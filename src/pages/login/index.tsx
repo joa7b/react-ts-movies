@@ -2,7 +2,7 @@ import Header from "../../components/menu";
 
 import { MainWrapper, MainItem, LoginContainer, FormContainer, TitleLogin, InputLogin, ButtonLogin } from "./styles";
 
-const Dashboard = () => {
+const Login = () => {
     return(
         <MainWrapper>
             <Header />
@@ -21,4 +21,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default Login;
