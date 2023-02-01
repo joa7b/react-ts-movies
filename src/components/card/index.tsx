@@ -2,7 +2,7 @@ import Movie from "../../utils/types/movies.type";
 
 import { CardWrapper } from "./styles";
 
-const Card = ({title, description, imdbScore, trailerYoutubeUrl, year, image}:Movie) => {
+const Card = ({title, image}:any) => {
     return(
         <CardWrapper>
             <img src={image} alt="" />
@@ -11,4 +11,4 @@ const Card = ({title, description, imdbScore, trailerYoutubeUrl, year, image}:Mo
     )
 }
 
-export default Card;
+export default Card;    

@@ -6,23 +6,27 @@ import moviesApi from "../../utils/api/movies.api";
 import { SlideWrapper } from "./styles";
 
 const Slide = () => {
-    const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
-    useEffect(() => {
-      const getAllMovies = async () => {
-        const data: Array<Movie> = await moviesApi.getAllMovies();
-        setMovies(data);
-      };
-      getAllMovies();
-    }, []);
+  useEffect(() => {
+    const getPopularMovies = async () => {
+      const data: Array<Movie> = await moviesApi.getPopularMovies();
+      setMovies(data);
+    };
+    getPopularMovies();
+  }, []);
 
+  console.log(movies);
 
-    return(
-        <SlideWrapper>
-            {movies.map((e) => <Card title={e.title} description={e.description} imdbScore={e.imdbScore} image={e.image} trailerYoutubeUrl={e.trailerYoutubeUrl} year={e.year}/>)}
-        </SlideWrapper>
-    )
-}
-
+  return (
+    <SlideWrapper>
+      {movies &&
+        movies.map((e) => {
+          const imageKey = `https://image.tmdb.org/t/p/original${e.poster_path}`
+          return <Card title={e.title} image={imageKey} />;
+        })}
+    </SlideWrapper>
+  );
+};
 
 export default Slide;
