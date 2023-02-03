@@ -7,24 +7,24 @@ import { MainWrapper, MainItem, FormContainer, InputContainer, TextareaContainer
 const Dashboard = () => {
   const navigate = useNavigate()
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
 
-    const data = {
-      title: e.currentTarget.titleMovie.value,
-      description: e.currentTarget.description.value,
-      year: e.currentTarget.year.value,
-      image: e.currentTarget.image.value,
-      imdbScore: e.currentTarget.imdbScore.value,
-      trailerYoutubeUrl: e.currentTarget.trailerYoutubeUrl.value
-    }
+  //   const data = {
+  //     title: e.currentTarget.titleMovie.value,
+  //     description: e.currentTarget.description.value,
+  //     year: e.currentTarget.year.value,
+  //     image: e.currentTarget.image.value,
+  //     imdbScore: e.currentTarget.imdbScore.value,
+  //     trailerYoutubeUrl: e.currentTarget.trailerYoutubeUrl.value
+  //   }
 
-    console.log(data)
+  //   console.log(data)
 
-    await moviesApi.createMovies(data);
+  //   await moviesApi.createMovies(data);
 
-    navigate("/home")
-  }
+  //   navigate("/home")
+  // }
 
 
 
@@ -34,7 +34,7 @@ const Dashboard = () => {
       <MainItem>
         <div>
           <h2>Cadastro de produto</h2>
-          <FormContainer action=""  onSubmit={handleSubmit}>
+          <FormContainer action="">
             <InputContainer type="text" name="titleMovie" placeholder="Insira o título" />
             <TextareaContainer
               name="description"
