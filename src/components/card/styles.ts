@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CardWrapper = styled.div`
   text-align: center;
   width: 170px;
+  margin-bottom: 50px;
 
   img {
     width: 60%;
@@ -19,7 +20,7 @@ export const CardWrapper = styled.div`
     cursor: pointer;
     img {
       transition: 0.2s;
-      width: 70%;
+      width: 63%;
     }
   }
 `;

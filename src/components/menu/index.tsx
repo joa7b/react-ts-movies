@@ -10,7 +10,7 @@ const MenuWrapper = styled.section`
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 35%, rgba(0,212,255,0) 100%);
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 99;
 `;
 

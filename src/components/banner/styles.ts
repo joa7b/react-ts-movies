@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const BannerWrapper = styled.section`
   width: 100%;
-  height: 100vh;
-
-  position: relative;
+  height: 500px;
   background-image: url("../../../assets/images/1126978.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,9 +21,11 @@ export const BannerItem = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding: 100px;
   gap: 15px;
   margin-left: 100px;
   color: white;
+  justify-content: center;
 `;
 
 export const TitleContainer = styled.h1`
